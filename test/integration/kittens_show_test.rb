@@ -25,4 +25,15 @@ class KittensShowTest < ActionDispatch::IntegrationTest
       delete kitten_path(@kitten)
     end
   end
+
+  test "should function as an API through JSON" do
+    get kitten_path(@kitten), format: :json
+    assert_response :success
+
+    json = JSON.parse(response.body, symbolize_names: true)
+    assert_equal @kitten.name, json[:name]
+    assert_equal @kitten.age.to_s, json[:age]
+    assert_equal @kitten.cuteness.to_s, json[:cuteness]
+    assert_equal @kitten.softness.to_s, json[:softness]
+  end
 end
