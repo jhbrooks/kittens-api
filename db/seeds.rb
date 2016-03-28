@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Kitten.delete_all
+
+Kitten.create!(name: "Ettercot", age: 5, cuteness: 7, softness: 5)
+Kitten.create!(name: "Old Tom", age: 9, cuteness: 8, softness: 9)

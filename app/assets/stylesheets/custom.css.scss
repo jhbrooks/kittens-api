@@ -1,0 +1,27 @@
+/* alerts */
+
+.alert-danger {
+  color: red;
+}
+
+.alert-success {
+  color: green;
+}
+
+/* forms */
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  display: inline;
+  color: red;
+  input {
+    border: 1px solid red;
+  }
+}

@@ -1,0 +1,9 @@
+<% provide :title, @kitten.name %>
+
+<h1><%= @kitten.name %></h1>
+<span><%= "Age: #{pretty_decimal(@kitten.age)}" %></span>
+<span><%= "Cuteness: #{pretty_decimal(@kitten.cuteness)}" %></span>
+<span><%= "Softness: #{pretty_decimal(@kitten.softness)}" %></span>
+<%= link_to "edit", edit_kitten_path(@kitten) %>
+<%= link_to "delete", @kitten, method: :delete,
+                               data: { confirm: "Are you sure?" } %>
